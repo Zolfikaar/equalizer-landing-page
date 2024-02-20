@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+:root{
+  --light-blue:#66E2DC;
+  --light-red:#FA7453;
+  --light-orang:#FFB964;
+  --white:#FCFAF9;
+  --black:#191826;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+}
+body{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 2.125em;
+  background-image: url('/assets/bg-main-desktop.png');
+  position: relative;
+  z-index: 1;
+}
+body .pg__pattern{
+  position: absolute;
+  top: -100px;
+  right: 0;
+
+}
+.container{
+  width: 87%;
+  margin: 0 auto;
+}
+h1{
+  font-weight: bold;
+  font-size: 4.4em;
+  line-height: 1.1em;
+  letter-spacing: -0.0625em;
+}
+h2{
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 2em;
+}
+button{
+  width: 333px;
+  height: 61px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: .9em;
+  line-height: 1.6em;
+  letter-spacing: -0.009em;
+}
+button.ios{
+  background-color: var(--black);
+  color: var(--white);
+}
+button.android{
+  background-color: var(--white);
+  color: var(--black);
+}
+button.ios:hover{
+  cursor: pointer;
+  background-color: var(--light-blue);
+}
+button.android:hover{
+  cursor: pointer;
+  background-color: var(--light-orang);
+}
+
+.logo{
+
+  margin: 50px 0;
+}
+.main__heading{
+  margin-top: 50px;
+  width: 75%;
+}
+.hero__desc{
+  margin: 50px 0;
+  width: 75%;
+}
+
+.featured__content{
+  background-color: var(--black);
+  border-radius: 15px;
+  color: var(--white);
+  padding: 50px;
+  background-image: url('/assets/bg-pattern-2.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  position: relative;
+  margin: 150px 0;
+}
+.featured__content__bg{
+  background-size: cover; 
+  position: absolute;
+  top: -100px;
+  left: 200px;
+}
+.featured__content__bg img{
+  width: 312px;
+  height: 642px;
+}
+.featured__content .card{
+  width: 445px;
+  height: 625px;
+  border-radius: 15px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-red);
+  position: relative;
+  right: -60%;
+  bottom: -100px;
+}
+.card .price{margin: 20px 0;}
+.card .price span{
+  font-size: 2em;
+  font-weight: bold;
+}
+.card button.ios{
+  margin: 20px 0;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+footer .footer__info{
+  display: flex;
+  align-items: center;
+}
+footer .footer__info .logo{
+  margin: unset;
+  margin-right: 150px;
+}
+footer .footer__info p{
+  width: 60%;
+}
+footer .socials{
+  display: flex;
+}
+footer .socials .social:not(:last-child){
+  margin-right: 20px;
+}
+footer .socials .social:hover svg path{fill: var(--light-red);cursor: pointer;}
+/* Mobile Screen */
+@media screen AND (min-width:370px) AND (max-width: 767px){
+  .container{
+    width: 95%;
+  }
+  body{
+    background-image: url('/assets/bg-main-mobile.png');
+    font-size: .8em;
+    line-height: 1.625em;
+  }
+  body .pg__pattern{
+    display: none;
+  }
+  button{
+    width: 18.5em;
+  }
+}
+/* Tablet Screen */
+@media screen AND (min-width:768px) AND (max-width: 1439px){
+  .container{
+    width: 90%;
+  }
+  body{
+  background-image: url('/assets/bg-main-tablet.png');
+
+  }
+  button{
+    width: 18.5em;
+  }
+}
