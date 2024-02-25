@@ -17,7 +17,7 @@ body{
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.7rem;
-  background-image: url('/assets/bg-main-desktop.png');
+  background-image: url('./assets/bg-main-desktop.png');
   position: relative;
   z-index: 1;
 }
@@ -80,7 +80,7 @@ button.android:hover{
   border-radius: 15px;
   color: var(--white);
   padding: 50px;
-  background-image: url('/assets/bg-pattern-2.svg');
+  background-image: url('./assets/bg-pattern-2.svg');
   background-repeat: no-repeat;
   background-position: center center;
   display: flex;
@@ -165,7 +165,7 @@ footer .socials .social:hover svg path{fill: var(--light-red);cursor: pointer;}
 /* Mobile Screen */
 @media screen AND (min-width:370px) AND (max-width: 767px){
   body{
-    background-image: url('/assets/bg-main-mobile.png');
+    background-image: url('./assets/bg-main-mobile.png');
     font-size: 1rem;
     line-height: 1.625rem;
   }
@@ -252,7 +252,7 @@ footer .socials .social:hover svg path{fill: var(--light-red);cursor: pointer;}
 /* Tablet Screen */
 @media screen AND (min-width:768px) AND (max-width: 1439px){
   body{
-    background-image: url('/assets/bg-main-tablet.png');
+    background-image: url('./assets/bg-main-tablet.png');
     font-size: 1rem;
     line-height: 1.556rem;
   }
