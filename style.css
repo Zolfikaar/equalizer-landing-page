@@ -15,10 +15,8 @@
 }
 body{
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  font-size: 1.25em;
-  line-height: 2.125em;
+  font-size: 1rem;
+  line-height: 1.7rem;
   background-image: url('/assets/bg-main-desktop.png');
   position: relative;
   z-index: 1;
@@ -27,22 +25,17 @@ body .pg__pattern{
   position: absolute;
   top: -100px;
   right: 0;
-
-}
-.container{
-  width: 87%;
-  margin: 0 auto;
 }
 h1{
   font-weight: bold;
-  font-size: 4.4em;
-  line-height: 1.1em;
-  letter-spacing: -0.0625em;
+  font-size: 4.4rem;
+  line-height: 4.4rem;
+  letter-spacing: -0.05rem;
 }
 h2{
   font-weight: bold;
-  font-size: 2.5em;
-  line-height: 2em;
+  font-size: 2rem;
+  line-height: 2.6rem;
 }
 button{
   width: 333px;
@@ -50,9 +43,9 @@ button{
   border: none;
   border-radius: 15px;
   font-weight: bold;
-  font-size: .9em;
-  line-height: 1.6em;
-  letter-spacing: -0.009em;
+  font-size: .9rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.009rem;
 }
 button.ios{
   background-color: var(--black);
@@ -70,20 +63,18 @@ button.android:hover{
   cursor: pointer;
   background-color: var(--light-orang);
 }
-
-.logo{
-
-  margin: 50px 0;
+.header,
+.hero__contetnt{padding: 0 100px;}
+.header{margin-top: 30px;}
+.hero__contetnt .main__heading{width: 50%;}
+.hero__contetnt .hero__desc{width: 42%;}
+.hero__contetnt .main__heading{margin-top: 80px;}
+.hero__contetnt .hero__desc{margin-top: 30px;}
+.header,
+.hero__contetnt{
+  margin-left: 30px;
+  margin-right: 30px;
 }
-.main__heading{
-  margin-top: 50px;
-  width: 75%;
-}
-.hero__desc{
-  margin: 50px 0;
-  width: 75%;
-}
-
 .featured__content{
   background-color: var(--black);
   border-radius: 15px;
@@ -94,44 +85,63 @@ button.android:hover{
   background-position: center center;
   display: flex;
   position: relative;
-  margin: 150px 0;
+  margin: 200px 100px;
+  height: 600px;
 }
-.featured__content__bg{
-  background-size: cover; 
+.featured__content .featured__content__bg{
   position: absolute;
-  top: -100px;
+  top: -130px;
   left: 200px;
 }
-.featured__content__bg img{
-  width: 312px;
-  height: 642px;
+.featured__content .featured__content__bg img{
+  width: 270px;
+  height: 556px;
 }
 .featured__content .card{
-  width: 445px;
-  height: 625px;
+  background-color: var(--light-red);
+  width: 399px;
+  height: 546px;
   border-radius: 15px;
-  padding: 20px 50px;
+  padding: 20px 33px;
   display: flex;
   flex-direction: column;
-  background-color: var(--light-red);
-  position: relative;
-  right: -60%;
-  bottom: -100px;
+  justify-content: space-evenly;
+  z-index: 5;
+  position: absolute;
+  top: 190px;
+  right: 70px;
 }
-.card .price{margin: 20px 0;}
-.card .price span{
-  font-size: 2em;
+.featured__content .card p{margin-top: 20px;}
+.featured__content .card .price{
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+}
+.featured__content .card .price span{
+  font-size: 4.063rem;
+  line-height: 3.25rem;
   font-weight: bold;
+  margin-right: 20px;
 }
-.card button.ios{
-  margin: 20px 0;
+.featured__content .card .ios img,
+.featured__content .card .android img{margin-right: 15px;}
+.featured__content .card .ios,
+.featured__content .card .android{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
 }
+
 
 footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  padding: 0 100px;
 }
 footer .footer__info{
   display: flex;
@@ -142,8 +152,9 @@ footer .footer__info .logo{
   margin-right: 150px;
 }
 footer .footer__info p{
-  width: 60%;
+  width: 28%;
 }
+footer .footer__info p span{font-weight: bold;}
 footer .socials{
   display: flex;
 }
@@ -153,31 +164,197 @@ footer .socials .social:not(:last-child){
 footer .socials .social:hover svg path{fill: var(--light-red);cursor: pointer;}
 /* Mobile Screen */
 @media screen AND (min-width:370px) AND (max-width: 767px){
-  .container{
-    width: 95%;
-  }
   body{
     background-image: url('/assets/bg-main-mobile.png');
-    font-size: .8em;
-    line-height: 1.625em;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
-  body .pg__pattern{
-    display: none;
+  h1{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: -0.028rem;
   }
-  button{
-    width: 18.5em;
+  h2{
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
+  body .pg__pattern{display: none;}
+  button{width: 296px;}
+  .header{
+    padding: 0 20px ;
+    margin-top: 30px;
+  }
+  .hero__contetnt{padding: 0 20px ;}
+  .hero__contetnt .main__heading{margin-top: 20px;}
+  .hero__contetnt .hero__desc{
+    margin-top: 20px;
+    padding-right: 10px;
+  }
+  .featured__content{
+    padding: unset;
+    flex-direction: column;
+    align-items: center;
+    background-position: center top;
+  }
+  .featured__content .featured__content__bg img{
+    width: 208px;
+    height: 430px;
+    position: relative;
+    top: -100px;
+  }
+  .featured__content .card{
+    background-color: var(--light-red);
+    width: 100%;
+    height: 546px;
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .featured__content .card p{margin-top: 20px;}
+  .featured__content .card .price{
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 30px 0;
+  }
+  .featured__content .card .price span{
+    font-size: 4.063rem;
+    line-height: 3.25rem;
+    font-weight: bold;
+  }
+  .featured__content .card .ios img,
+  .featured__content .card .android img{margin-right: 15px;}
+  .featured__content .card .ios,
+  .featured__content .card .android{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  .featured__content .card .ios{margin-bottom: 15px;}
+  footer{
+    padding: 0 30px;
+    flex-direction: column;
+    align-items: unset;
+  }
+  footer .footer__info {
+    flex-direction: column;
+    align-items: unset;
+  }
+  footer .footer__info p{
+    width: 100%;
+    padding-right: 18px;
+    margin: 30px 0;
+  }
+  footer .socials{margin-top: 30px;}
 }
 /* Tablet Screen */
 @media screen AND (min-width:768px) AND (max-width: 1439px){
-  .container{
-    width: 90%;
-  }
   body{
-  background-image: url('/assets/bg-main-tablet.png');
-
+    background-image: url('/assets/bg-main-tablet.png');
+    font-size: 1rem;
+    line-height: 1.556rem;
   }
-  button{
-    width: 18.5em;
+  h1{
+    font-size: 3.556rem;
+    line-height: 3.556rem;
+    letter-spacing: -0.041rem;
+  }
+  h2{
+    font-size: 1.778rem;
+    line-height: 2.222rem;
+  }
+  button{width: 296px;}
+  body .pg__pattern{width: 230px;}
+
+  .header{
+    margin-top: 30px;
+  }
+  .hero__contetnt .hero__desc,
+  .hero__contetnt .main__heading{
+    width: 65%;
+  }
+  .hero__contetnt .main__heading{
+    margin-top: 80px;
+  }
+  .hero__contetnt .hero__desc{
+    margin-top: 30px;
+    padding-right: 10px;
+  }
+
+  .header,
+  .hero__contetnt{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .featured__content{
+    flex-direction: column;
+    align-items: center;
+    background-position: top center;
+    height: 600px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+  .featured__content .featured__content__bg{
+    position: absolute;
+    top: -130px;
+    left: 60px;
+  }
+  .featured__content .featured__content__bg img{
+    width: 270px;
+    height: 556px;
+  }
+  .featured__content .card{
+    background-color: var(--light-red);
+    width: 399px;
+    height: 546px;
+    border-radius: 15px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 5;
+    position: absolute;
+    top: 190px;
+    right: 70px;
+  }
+  .featured__content .card p{margin-top: 20px;}
+  .featured__content .card .price{
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+  }
+  .featured__content .card .price span{
+    font-size: 4.063rem;
+    line-height: 3.25rem;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  .featured__content .card .ios img,
+  .featured__content .card .android img{margin-right: 15px;}
+  .featured__content .card .ios,
+  .featured__content .card .android{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  footer{
+    padding: 0 30px;
+    align-items: end;
+  }
+  footer .footer__info {
+    flex-direction: column;
+    align-items: unset;
+  }
+  footer .footer__info p{
+    width: 100%;
+    padding-right: 320px;
+    margin-top: 30px;
   }
 }
